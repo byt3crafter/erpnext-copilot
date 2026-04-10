@@ -1,0 +1,48 @@
+/* OpenAI OAuth Widget */
+.openai-oauth-widget {
+    padding: 16px;
+    border: 1px solid var(--border-color, #d1d8dd);
+    border-radius: 8px;
+    background: var(--fg-color, #fff);
+    margin-top: 12px;
+}
+
+.openai-oauth-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.openai-status-text {
+    font-size: var(--text-sm, 13px);
+    color: var(--text-color, #333);
+}
+
+.openai-oauth-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.openai-paste-section {
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px dashed var(--border-color, #d1d8dd);
+    border-radius: 6px;
+    background: var(--subtle-fg, #f7f7f7);
+}
+
+.openai-paste-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.openai-paste-row input {
+    flex: 1;
+}
+
+.openai-paste-row .btn {
+    white-space: nowrap;
+}

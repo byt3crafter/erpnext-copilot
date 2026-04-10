@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "autoname": "AI-TASK-.#####",
+ "creation": "2026-03-26 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_section",
+  "user",
+  "company",
+  "status",
+  "title",
+  "schedule_section",
+  "trigger_type",
+  "trigger_date",
+  "trigger_time",
+  "day_of_week",
+  "day_of_month",
+  "prompt_section",
+  "prompt",
+  "context_notes",
+  "execution_section",
+  "last_run",
+  "last_result",
+  "run_count",
+  "next_run"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_section",
+   "fieldtype": "Section Break",
+   "label": "Task Info"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nPaused\nCompleted\nFailed"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "trigger_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Trigger Type",
+   "options": "Once\nDaily\nWeekly\nMonthly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trigger_date",
+   "fieldtype": "Date",
+   "label": "Trigger Date"
+  },
+  {
+   "default": "08:00:00",
+   "fieldname": "trigger_time",
+   "fieldtype": "Time",
+   "label": "Trigger Time"
+  },
+  {
+   "fieldname": "day_of_week",
+   "fieldtype": "Select",
+   "label": "Day of Week",
+   "options": "\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday"
+  },
+  {
+   "fieldname": "day_of_month",
+   "fieldtype": "Int",
+   "label": "Day of Month"
+  },
+  {
+   "fieldname": "prompt_section",
+   "fieldtype": "Section Break",
+   "label": "AI Prompt"
+  },
+  {
+   "fieldname": "prompt",
+   "fieldtype": "Small Text",
+   "label": "Prompt",
+   "reqd": 1
+  },
+  {
+   "fieldname": "context_notes",
+   "fieldtype": "Small Text",
+   "label": "Context Notes"
+  },
+  {
+   "fieldname": "execution_section",
+   "fieldtype": "Section Break",
+   "label": "Execution History"
+  },
+  {
+   "fieldname": "last_run",
+   "fieldtype": "Datetime",
+   "label": "Last Run",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_result",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Last Result",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "run_count",
+   "fieldtype": "Int",
+   "label": "Run Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_run",
+   "fieldtype": "Datetime",
+   "label": "Next Run",
+   "read_only": 1
+  }
+ ],
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-03-26 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AI Bots",
+ "name": "AI Scheduled Task",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "import": 0
+  },
+  {
+   "if_owner": 1,
+   "read": 1,
+   "role": "All",
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 0,
+   "export": 0,
+   "import": 0,
+   "share": 0,
+   "print": 0,
+   "email": 0,
+   "select": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

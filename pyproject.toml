@@ -1,0 +1,17 @@
+[project]
+name = "erpnext_ai_bots"
+version = "1.1.0"
+description = "AI-powered assistant for ERPNext — chat with your ERP in plain English"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Ludovic Micinthe", email = "dovik@micinthe.com"},
+]
+
+[build-system]
+requires = ["setuptools>=67.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["erpnext_ai_bots/tests"]
+pythonpath = ["."]

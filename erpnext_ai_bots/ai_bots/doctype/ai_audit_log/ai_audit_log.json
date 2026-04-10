@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "AI-AUDIT-.#####",
+ "creation": "2026-03-26 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 0,
+ "engine": "InnoDB",
+ "field_order": [
+  "session",
+  "user",
+  "company",
+  "tool_name",
+  "tool_input_json",
+  "tool_output_json",
+  "tool_result_status",
+  "execution_time_ms",
+  "doctype_accessed",
+  "document_name",
+  "action_type",
+  "fields_requested",
+  "fields_blocked"
+ ],
+ "fields": [
+  {
+   "fieldname": "session",
+   "fieldtype": "Link",
+   "label": "Session",
+   "options": "AI Chat Session",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "in_list_view": 0
+  },
+  {
+   "fieldname": "tool_name",
+   "fieldtype": "Data",
+   "label": "Tool Name",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "tool_input_json",
+   "fieldtype": "Long Text",
+   "label": "Tool Input"
+  },
+  {
+   "fieldname": "tool_output_json",
+   "fieldtype": "Long Text",
+   "label": "Tool Output"
+  },
+  {
+   "fieldname": "tool_result_status",
+   "fieldtype": "Select",
+   "label": "Tool Result Status",
+   "options": "Success\nError\nPermissionDenied\nSanitizationBlocked",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "execution_time_ms",
+   "fieldtype": "Int",
+   "label": "Execution Time (ms)"
+  },
+  {
+   "fieldname": "doctype_accessed",
+   "fieldtype": "Data",
+   "label": "DocType Accessed"
+  },
+  {
+   "fieldname": "document_name",
+   "fieldtype": "Data",
+   "label": "Document Name"
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Select",
+   "label": "Action Type",
+   "options": "Read\nCreate\nUpdate\nSubmit\nCancel\nReport",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "fields_requested",
+   "fieldtype": "Small Text",
+   "label": "Fields Requested"
+  },
+  {
+   "fieldname": "fields_blocked",
+   "fieldtype": "Small Text",
+   "label": "Fields Blocked"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-03-26 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AI Bots",
+ "name": "AI Audit Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "System Manager",
+   "share": 0,
+   "write": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "import": 0,
+   "select": 0
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "track_seen": 0,
+ "track_views": 0
+}

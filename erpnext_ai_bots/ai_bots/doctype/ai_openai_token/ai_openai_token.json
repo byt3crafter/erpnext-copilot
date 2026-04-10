@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "autoname": "field:user",
+ "creation": "2026-03-26 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 0,
+ "engine": "InnoDB",
+ "field_order": [
+  "token_section",
+  "user",
+  "status",
+  "chatgpt_account_id",
+  "connected_at",
+  "tokens_section",
+  "access_token",
+  "refresh_token",
+  "token_expiry"
+ ],
+ "fields": [
+  {
+   "fieldname": "token_section",
+   "fieldtype": "Section Break",
+   "label": "Connection Info"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Disconnected",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Connected\nDisconnected\nExpired",
+   "read_only": 1
+  },
+  {
+   "fieldname": "chatgpt_account_id",
+   "fieldtype": "Data",
+   "label": "ChatGPT Account ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "connected_at",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Connected At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tokens_section",
+   "fieldtype": "Section Break",
+   "label": "Tokens"
+  },
+  {
+   "fieldname": "access_token",
+   "fieldtype": "Password",
+   "label": "Access Token"
+  },
+  {
+   "fieldname": "refresh_token",
+   "fieldtype": "Password",
+   "label": "Refresh Token"
+  },
+  {
+   "fieldname": "token_expiry",
+   "fieldtype": "Datetime",
+   "label": "Token Expiry",
+   "read_only": 1
+  }
+ ],
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-03-26 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AI Bots",
+ "name": "AI OpenAI Token",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 0,
+   "write": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "import": 0
+  },
+  {
+   "if_owner": 1,
+   "read": 1,
+   "role": "All",
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 0,
+   "export": 0,
+   "import": 0,
+   "share": 0,
+   "print": 0,
+   "email": 0,
+   "select": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

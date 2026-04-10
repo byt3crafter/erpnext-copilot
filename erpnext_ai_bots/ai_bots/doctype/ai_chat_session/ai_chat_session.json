@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "autoname": "AI-CHAT-.#####",
+ "creation": "2026-03-26 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "session_info_section",
+  "user",
+  "company",
+  "status",
+  "title",
+  "category",
+  "pinned",
+  "conversation_section",
+  "messages_json",
+  "message_count",
+  "last_message_at",
+  "cost_tracking_section",
+  "total_input_tokens",
+  "total_output_tokens",
+  "total_cost_usd",
+  "total_tool_calls",
+  "metadata_section",
+  "active_tools_used",
+  "subagent_spawned",
+  "model_used"
+ ],
+ "fields": [
+  {
+   "fieldname": "session_info_section",
+   "fieldtype": "Section Break",
+   "label": "Session Info"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nClosed\nArchived"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title"
+  },
+  {
+   "default": "General",
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "General\nFinance\nSales\nStock\nHR"
+  },
+  {
+   "default": "0",
+   "fieldname": "pinned",
+   "fieldtype": "Check",
+   "label": "Pinned"
+  },
+  {
+   "fieldname": "conversation_section",
+   "fieldtype": "Section Break",
+   "label": "Conversation"
+  },
+  {
+   "fieldname": "messages_json",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Messages (JSON)"
+  },
+  {
+   "fieldname": "message_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Message Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_message_at",
+   "fieldtype": "Datetime",
+   "label": "Last Message At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Tracking"
+  },
+  {
+   "fieldname": "total_input_tokens",
+   "fieldtype": "Int",
+   "label": "Total Input Tokens",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_output_tokens",
+   "fieldtype": "Int",
+   "label": "Total Output Tokens",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cost_usd",
+   "fieldtype": "Currency",
+   "label": "Total Cost (USD)",
+   "precision": "6",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_tool_calls",
+   "fieldtype": "Int",
+   "label": "Total Tool Calls",
+   "read_only": 1
+  },
+  {
+   "fieldname": "metadata_section",
+   "fieldtype": "Section Break",
+   "label": "Metadata"
+  },
+  {
+   "fieldname": "active_tools_used",
+   "fieldtype": "Small Text",
+   "label": "Tools Used",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "subagent_spawned",
+   "fieldtype": "Check",
+   "label": "Subagent Was Spawned",
+   "read_only": 1
+  },
+  {
+   "fieldname": "model_used",
+   "fieldtype": "Data",
+   "label": "Model Used",
+   "read_only": 1
+  }
+ ],
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-03-26 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AI Bots",
+ "name": "AI Chat Session",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "import": 0
+  },
+  {
+   "if_owner": 1,
+   "read": 1,
+   "role": "All",
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 0,
+   "export": 0,
+   "import": 0,
+   "share": 0,
+   "print": 0,
+   "email": 0,
+   "select": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

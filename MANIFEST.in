@@ -1,0 +1,12 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+include license.txt
+recursive-include erpnext_ai_bots *.py
+recursive-include erpnext_ai_bots *.json
+recursive-include erpnext_ai_bots *.js
+recursive-include erpnext_ai_bots *.css
+recursive-include erpnext_ai_bots *.html

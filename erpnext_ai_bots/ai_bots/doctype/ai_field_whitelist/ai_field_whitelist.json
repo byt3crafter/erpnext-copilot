@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "autoname": "field:ref_doctype",
+ "creation": "2026-03-26 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ref_doctype",
+  "mode",
+  "fields_section",
+  "readable_fields",
+  "writable_fields",
+  "blocked_fields",
+  "limits_section",
+  "max_list_limit",
+  "allow_create",
+  "allow_submit",
+  "allow_cancel",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "ref_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "DocType",
+   "options": "DocType",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Whitelist",
+   "fieldname": "mode",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mode",
+   "options": "Whitelist\nBlocklist"
+  },
+  {
+   "fieldname": "fields_section",
+   "fieldtype": "Section Break",
+   "label": "Field Access"
+  },
+  {
+   "description": "JSON array. Empty = all readable",
+   "fieldname": "readable_fields",
+   "fieldtype": "Small Text",
+   "label": "Readable Fields"
+  },
+  {
+   "description": "JSON array. Empty = none writable",
+   "fieldname": "writable_fields",
+   "fieldtype": "Small Text",
+   "label": "Writable Fields"
+  },
+  {
+   "description": "JSON array. Always blocked",
+   "fieldname": "blocked_fields",
+   "fieldtype": "Small Text",
+   "label": "Blocked Fields"
+  },
+  {
+   "fieldname": "limits_section",
+   "fieldtype": "Section Break",
+   "label": "Limits & Permissions"
+  },
+  {
+   "default": "100",
+   "fieldname": "max_list_limit",
+   "fieldtype": "Int",
+   "label": "Max List Limit"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_create",
+   "fieldtype": "Check",
+   "label": "Allow Create"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_submit",
+   "fieldtype": "Check",
+   "label": "Allow Submit"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_cancel",
+   "fieldtype": "Check",
+   "label": "Allow Cancel"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-03-26 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AI Bots",
+ "name": "AI Field Whitelist",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "import": 0,
+   "select": 0
+  }
+ ],
+ "sort_field": "ref_doctype",
+ "sort_order": "ASC",
+ "track_changes": 0
+}

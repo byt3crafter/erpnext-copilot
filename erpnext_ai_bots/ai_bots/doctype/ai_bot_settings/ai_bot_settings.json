@@ -1,0 +1,328 @@
+{
+ "actions": [],
+ "creation": "2026-03-26 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deployment_section",
+  "deployment_mode",
+  "ai_name",
+  "accent_color",
+  "ai_provider_section",
+  "provider",
+  "api_key",
+  "model_name",
+  "elevenlabs_api_key",
+  "elevenlabs_voice_id",
+  "max_tokens_per_request",
+  "temperature",
+  "oauth_section",
+  "oauth_enabled",
+  "oauth_provider_url",
+  "oauth_client_id",
+  "oauth_token",
+  "oauth_token_expiry",
+  "rate_limits_section",
+  "max_requests_per_minute",
+  "max_requests_per_day",
+  "max_tool_calls_per_turn",
+  "subagent_enabled",
+  "max_subagent_depth",
+  "security_section",
+  "enable_prompt_defense",
+  "enable_field_whitelisting",
+  "log_full_conversations",
+  "redact_pii_in_logs",
+  "allowed_doctypes_section",
+  "allowed_read_doctypes",
+  "allowed_write_doctypes",
+  "blocked_doctypes",
+  "db_section",
+  "db_host",
+  "db_port",
+  "db_user",
+  "db_password",
+  "db_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "deployment_section",
+   "fieldtype": "Section Break",
+   "label": "Deployment"
+  },
+  {
+   "default": "Community",
+   "fieldname": "deployment_mode",
+   "fieldtype": "Select",
+   "label": "Deployment Mode",
+   "options": "Community",
+   "read_only": 1
+  },
+  {
+   "default": "AI Oracle",
+   "description": "Name of the AI assistant shown in DMs and the chat header. Users can mention it with @name in DMs.",
+   "fieldname": "ai_name",
+   "fieldtype": "Data",
+   "label": "AI Name"
+  },
+  {
+   "default": "#6c5ce7",
+   "description": "Primary accent color for the AI chat interface",
+   "fieldname": "accent_color",
+   "fieldtype": "Color",
+   "label": "Accent Color"
+  },
+  {
+   "fieldname": "ai_provider_section",
+   "fieldtype": "Section Break",
+   "label": "AI Provider"
+  },
+  {
+   "default": "Anthropic",
+   "fieldname": "provider",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Provider",
+   "options": "Anthropic\nOpenAI\nOpenAI (ChatGPT OAuth)\nCustom"
+  },
+  {
+   "description": "Your Anthropic/OpenAI API key (BYOK)",
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "default": "claude-sonnet-4-20250514",
+   "fieldname": "model_name",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "description": "ElevenLabs API key for text-to-speech. Leave blank to disable TTS.",
+   "fieldname": "elevenlabs_api_key",
+   "fieldtype": "Password",
+   "label": "ElevenLabs API Key"
+  },
+  {
+   "default": "21m00Tcm4TlvDq8ikWAM",
+   "description": "ElevenLabs voice ID (default: Rachel). Find IDs at elevenlabs.io/voice-lab.",
+   "fieldname": "elevenlabs_voice_id",
+   "fieldtype": "Data",
+   "label": "ElevenLabs Voice ID"
+  },
+  {
+   "default": "4096",
+   "fieldname": "max_tokens_per_request",
+   "fieldtype": "Int",
+   "label": "Max Tokens per Request"
+  },
+  {
+   "default": "0.3",
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "oauth_section",
+   "fieldtype": "Section Break",
+   "label": "OAuth / ChatGPT Connection"
+  },
+  {
+   "default": "0",
+   "fieldname": "oauth_enabled",
+   "fieldtype": "Check",
+   "label": "Enable OAuth PKCE"
+  },
+  {
+   "depends_on": "oauth_enabled",
+   "fieldname": "oauth_provider_url",
+   "fieldtype": "Data",
+   "label": "OAuth Provider URL"
+  },
+  {
+   "depends_on": "oauth_enabled",
+   "fieldname": "oauth_client_id",
+   "fieldtype": "Data",
+   "label": "OAuth Client ID"
+  },
+  {
+   "fieldname": "oauth_token",
+   "fieldtype": "Password",
+   "hidden": 1,
+   "label": "OAuth Access Token"
+  },
+  {
+   "fieldname": "oauth_token_expiry",
+   "fieldtype": "Datetime",
+   "label": "Token Expiry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rate_limits_section",
+   "fieldtype": "Section Break",
+   "label": "Rate Limits"
+  },
+  {
+   "default": "10",
+   "fieldname": "max_requests_per_minute",
+   "fieldtype": "Int",
+   "label": "Max Requests/Minute/User"
+  },
+  {
+   "default": "200",
+   "fieldname": "max_requests_per_day",
+   "fieldtype": "Int",
+   "label": "Max Requests/Day/User"
+  },
+  {
+   "default": "15",
+   "fieldname": "max_tool_calls_per_turn",
+   "fieldtype": "Int",
+   "label": "Max Tool Calls per Turn"
+  },
+  {
+   "default": "1",
+   "fieldname": "subagent_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Subagent Spawning"
+  },
+  {
+   "default": "2",
+   "fieldname": "max_subagent_depth",
+   "fieldtype": "Int",
+   "label": "Max Subagent Depth"
+  },
+  {
+   "fieldname": "security_section",
+   "fieldtype": "Section Break",
+   "label": "Security"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_prompt_defense",
+   "fieldtype": "Check",
+   "label": "Enable Prompt Injection Defense"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_field_whitelisting",
+   "fieldtype": "Check",
+   "label": "Enable Field Whitelisting"
+  },
+  {
+   "default": "0",
+   "fieldname": "log_full_conversations",
+   "fieldtype": "Check",
+   "label": "Log Full Conversations"
+  },
+  {
+   "default": "1",
+   "fieldname": "redact_pii_in_logs",
+   "fieldtype": "Check",
+   "label": "Redact PII in Audit Logs"
+  },
+  {
+   "fieldname": "allowed_doctypes_section",
+   "fieldtype": "Section Break",
+   "label": "Allowed DocTypes"
+  },
+  {
+   "description": "JSON array, empty = all permitted by role",
+   "fieldname": "allowed_read_doctypes",
+   "fieldtype": "Small Text",
+   "label": "Allowed Read DocTypes"
+  },
+  {
+   "description": "JSON array, explicit allowlist",
+   "fieldname": "allowed_write_doctypes",
+   "fieldtype": "Small Text",
+   "label": "Allowed Write DocTypes"
+  },
+  {
+   "description": "JSON array, always denied",
+   "fieldname": "blocked_doctypes",
+   "fieldtype": "Small Text",
+   "label": "Blocked DocTypes"
+  },
+  {
+   "fieldname": "db_section",
+   "fieldtype": "Section Break",
+   "label": "Database Connection (Optional)",
+   "description": "Leave blank to use the default Frappe DB connection. Fill in only when raw_sql should connect to a separate database."
+  },
+  {
+   "default": "localhost",
+   "fieldname": "db_host",
+   "fieldtype": "Data",
+   "label": "DB Host"
+  },
+  {
+   "default": "3306",
+   "fieldname": "db_port",
+   "fieldtype": "Data",
+   "label": "DB Port"
+  },
+  {
+   "fieldname": "db_user",
+   "fieldtype": "Data",
+   "label": "DB Username"
+  },
+  {
+   "fieldname": "db_password",
+   "fieldtype": "Password",
+   "label": "DB Password"
+  },
+  {
+   "fieldname": "db_name",
+   "fieldtype": "Data",
+   "label": "Database Name"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-03-26 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AI Bots",
+ "name": "AI Bot Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "import": 0,
+   "select": 0
+  },
+  {
+   "read": 1,
+   "role": "AI Bot Manager",
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 0,
+   "export": 0,
+   "import": 0,
+   "share": 0,
+   "print": 0,
+   "email": 0,
+   "select": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
