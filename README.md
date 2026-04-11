@@ -1,8 +1,47 @@
-# ERPNext AI Bots
+# ERPNext Copilot
 
 An AI-powered assistant for ERPNext — chat with your ERP in plain English.
 
 Ask business questions, create documents, run reports, and automate tasks through a conversational interface built right into ERPNext Desk.
+
+<p align="center">
+  <img src="screenshots/demo.gif" alt="ERPNext Copilot Demo" width="800">
+</p>
+
+## Screenshots
+
+<table>
+<tr>
+<td width="50%">
+<img src="screenshots/03_chat_panel_open.png" alt="Dashboard shortcuts">
+<p align="center"><em>Quick-access dashboard with report shortcuts</em></p>
+</td>
+<td width="50%">
+<img src="screenshots/04_top_customers_query.png" alt="Revenue query">
+<p align="center"><em>"Who are our top 5 customers?"</em></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<img src="screenshots/06_create_quotation.png" alt="Create documents">
+<p align="center"><em>Create documents with natural language</em></p>
+</td>
+<td width="50%">
+<img src="screenshots/05_stock_levels.png" alt="Stock levels">
+<p align="center"><em>Real-time stock levels across warehouses</em></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<img src="screenshots/07_chart_revenue.png" alt="Revenue bar chart">
+<p align="center"><em>Bar charts — revenue by customer</em></p>
+</td>
+<td width="50%">
+<img src="screenshots/07c_chart_margin.png" alt="Monthly trend line chart">
+<p align="center"><em>Line charts — monthly revenue trends</em></p>
+</td>
+</tr>
+</table>
 
 ## What It Does
 
@@ -62,7 +101,7 @@ User (ERPNext Desk)
 
 ```bash
 # Get the app
-bench get-app https://github.com/byt3crafter/erpnext_ai_bots.git
+bench get-app https://github.com/byt3crafter/erpnext-copilot.git
 
 # Install on your site
 bench --site your-site.localhost install-app erpnext_ai_bots
@@ -89,6 +128,11 @@ bench restart
    - Rate limits per user
    - Field whitelists per DocType
 4. The chat bubble will appear on all ERPNext pages
+
+<p align="center">
+  <img src="screenshots/10_ai_bot_settings.png" alt="AI Bot Settings" width="700">
+  <br><em>One-page setup — pick your provider and you're ready to go</em>
+</p>
 
 ## Tools Overview
 
