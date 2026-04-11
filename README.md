@@ -59,7 +59,7 @@ Ask business questions, create documents, run reports, and automate tasks throug
 - **Permission-Aware** — Every action checked against ERPNext's role-based permissions
 - **Scheduled Tasks** — Recurring reports, reminders ("Email me sales summary every Monday at 8am")
 - **Direct Messages** — User-to-user DMs with @AI mentions
-- **Multi-Provider** — OpenAI (ChatGPT OAuth) and Anthropic Claude supported
+- **Multi-Provider** — Connect your own ChatGPT account via OAuth (no API keys needed) or use Anthropic Claude
 - **Live Context** — Company snapshot (top customers, items, overdue alerts) injected into every conversation
 - **Fuzzy Matching** — Multi-stage customer/item search (exact, partial, word-by-word)
 - **Real-time Streaming** — Responses stream via Socket.IO with thinking indicators
@@ -120,7 +120,7 @@ bench restart
 
 1. Go to **AI Bot Settings** in ERPNext
 2. Choose your AI provider:
-   - **OpenAI (ChatGPT OAuth):** Click "Connect ChatGPT Account" for OAuth setup
+   - **OpenAI (ChatGPT OAuth):** Click "Connect ChatGPT Account" — users log in with their own ChatGPT account, no API keys needed
    - **Anthropic Claude:** Enter your API key (BYOK)
 3. Optionally configure:
    - Accent color for the chat widget
